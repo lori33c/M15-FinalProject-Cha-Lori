@@ -251,10 +251,11 @@ public class M15FinalProjectChaLoriApplication {
 						System.out.println("An error occured: " + e.getMessage());
 					}
 
-					System.out.println("name: " + cryptoResponse[0].name);
-					System.out.println("asset id: " + cryptoResponse[0].asset_id);
-					double price = Double.parseDouble(cryptoResponse[0].price_usd);
-					System.out.printf("price: $%.2f", price);
+					if (cryptoResponse != null) {
+						System.out.println("name: " + cryptoResponse[0].name);
+						System.out.println("asset id: " + cryptoResponse[0].asset_id);
+						System.out.println("price: $" + cryptoResponse[0].price_usd);
+					}
 					break;
 				case 5:
 					System.out.println("Goodbye");
